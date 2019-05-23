@@ -698,6 +698,9 @@ api_src:
 vground: $(VGROUND_OBJ) $(EXEC_DEF_PREREQ)
 	$(COMPILE_CMD)
 
+test:
+	$(info This is running)
+
 #
 #ucompit: $(UCOMPIT_OBJ) $(EXEC_DEF_PREREQ)
 #	$(CXX) $(CXXFLAGS) $^ -o $@
@@ -736,6 +739,8 @@ doc:
 	doxygen config.doc
 
 .PHONY: doc clean clausify_src api_src
+
+.DEFAULT_GOAL := vampire_dbg
 
 ###########################
 # include header dependencies
