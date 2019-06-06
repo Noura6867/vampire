@@ -698,9 +698,6 @@ api_src:
 vground: $(VGROUND_OBJ) $(EXEC_DEF_PREREQ)
 	$(COMPILE_CMD)
 
-test:
-	$(info This is running)
-
 #
 #ucompit: $(UCOMPIT_OBJ) $(EXEC_DEF_PREREQ)
 #	$(CXX) $(CXXFLAGS) $^ -o $@
@@ -738,7 +735,13 @@ doc:
 	rm -fr doc/html
 	doxygen config.doc
 
-.PHONY: doc clean clausify_src api_src
+test:
+	@echo "Compiling vampire"
+	$(vampire_dbg)
+	@echo "Running some tests"
+	python testing/run_tests.pyi vampire_dbg_master_4049
+
+.PHONY: doc clean clausify_src api_src test
 
 .DEFAULT_GOAL := vampire_dbg
 
