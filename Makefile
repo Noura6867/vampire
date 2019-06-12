@@ -739,7 +739,7 @@ test:
 	@echo "Compiling vampire"
 	$(vampire_dbg)
 	@echo "Running some tests"
-	python testing/run_tests.pyi vampire_dbg_master_4049
+	python testing/run_tests.py vampire_dbg_master_4049
 
 .PHONY: doc clean clausify_src api_src test
 

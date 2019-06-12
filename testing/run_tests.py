@@ -1,8 +1,14 @@
 #! /usr/bin/python
 
+import sys
+import csv
+
 # TODO: find a csv parsing library and import it
 
-vampire_executable = #get this from command-line arguments
+#get this from command-line argument
+vampire_executable = sys.argv[1]
+
+print("Testing "+vampire_executable+"...")
 
 config="testing/test_config.csv"
 
@@ -14,3 +20,21 @@ config="testing/test_config.csv"
 # 3. Run (lookup how to run binaries from Python) ./vampire options path --output_mode szs
 # 4. Get the return code and check it is correct
 # 5. Get the output and check it is correct (need to look in what Vampire prints)
+
+with open(config,"r") as file:
+    reader = csv.reader(file)
+    headers = reader.next()
+    for row in reader:
+        data = dict(zip(headers,row))
+        name = data['Test Name']
+        print('Running test: '+name)
+        #path = ?
+        #options = ?
+        # to find this library google 'running executable from Python'
+        #run vampire_executable + ' ' + options + ' ' + path + ' --output_mode szs'
+        #output = ? (output from running vampire)
+        #code = ? (return code)
+        # check if code is non-zero, if it is then test failed
+        # for line in output
+        #  if line is the result line then check it
+        # print if test passes/fails
