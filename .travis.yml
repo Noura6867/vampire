@@ -1,2 +1,6 @@
 language: cpp
 compiler: gcc
+jobs:
+        include:
+                - stage: test
+                  script: make test
