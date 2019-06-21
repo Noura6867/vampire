@@ -2,11 +2,12 @@
 
 import sys
 import csv
+import subprocess
 
 # TODO: find a csv parsing library and import it
 
 #get this from command-line argument
-vampire_executable = sys.argv[1]
+vampire_executable = "./"+sys.argv[1].strip()
 
 print("Testing "+vampire_executable+"...")
 
@@ -28,13 +29,28 @@ with open(config,"r") as file:
         data = dict(zip(headers,row))
         name = data['Test Name']
         print('Running test: '+name)
-        #path = ?
-        #options = ?
-        # to find this library google 'running executable from Python'
-        #run vampire_executable + ' ' + options + ' ' + path + ' --output_mode szs'
-        #output = ? (output from running vampire)
-        #code = ? (return code)
-        # check if code is non-zero, if it is then test failed
-        # for line in output
-        #  if line is the result line then check it
-        # print if test passes/fails
+        path = data['Problem Path'] 
+        options = data['Option String']
+        options_args = options.split(' ')
+        if len(options)==0:
+            options_args = []
+        args = [vampire_executable,path,'--output_mode','szs','-p','off']+options_args
+        print('args are '+str(args))
+        p = subprocess.Popen(args,stdout = subprocess.PIPE)
+
+        p.wait()
+        print(p.returncode)
+
+        passing=False
+        if p.returncode ==0:
+            output = p.stdout.read()
+            expected=data['Expected Status'] 
+            for line in output.splitlines():
+                if 'SZS' in line and expected in line:
+                    passing=True
+
+        if passing:
+            print "PASS"
+        else:
+            print "FAIL"
+
