@@ -698,36 +698,6 @@ api_src:
 vground: $(VGROUND_OBJ) $(EXEC_DEF_PREREQ)
 	$(COMPILE_CMD)
 
-#
-#ucompit: $(UCOMPIT_OBJ) $(EXEC_DEF_PREREQ)
-#	$(CXX) $(CXXFLAGS) $^ -o $@
-#
-#sat: $(SAT_OBJ) $(EXEC_DEF_PREREQ)
-#	$(CXX) $(CXXFLAGS) $^ -o $@
-##	strip sat
-#
-#test: $(TEST_OBJ) $(EXEC_DEF_PREREQ)
-#	$(CXX) $(CXXFLAGS) $^ -o $@
-#
-#rtest: $(RTEST_OBJ) $(EXEC_DEF_PREREQ)
-#	$(CXX) $(CXXFLAGS) $^ -o $@
-#
-#test_alloc: $(ALLOCTEST_OBJ) $(EXEC_DEF_PREREQ)
-#	$(CXX) $(CXXFLAGS) $^ -o $@
-#
-#
-#test_DHMap: $(DHTEST_OBJ) $(EXEC_DEF_PREREQ)
-#	$(CXX) $(CXXFLAGS) $^ -o $@
-#
-#test_DHMultiset: $(DHMSTEST_OBJ) $(EXEC_DEF_PREREQ)
-#	$(CXX) $(CXXFLAGS) $^ -o $@
-#
-#test_BinaryHeap: $(BHTEST_OBJ) $(EXEC_DEF_PREREQ)
-#	$(CXX) $(CXXFLAGS) $^ -o $@
-#
-#test_SkipList: $(SLTEST_OBJ) $(EXEC_DEF_PREREQ)
-#	$(CXX) $(CXXFLAGS) $^ -o $@
-
 clean:
 	rm -rf obj version.cpp
 
@@ -736,10 +706,11 @@ doc:
 	doxygen config.doc
 
 test:
+test: $(VAMPIRE_OBJ) $(EXEC_DEF_PREREQ) 
 	@echo "Compiling vampire"
-	$(vampire_dbg)
+	$(COMPILE_CMD)
 	@echo "Running some tests"
-	python testing/run_tests.py vampire_dbg_master_4049
+	python testing/run_tests.py  $@_$(BRANCH)_$(COM_CNT) 
 
 .PHONY: doc clean clausify_src api_src test
 
