@@ -53,4 +53,5 @@ with open(config,"r") as file:
             print "PASS"
         else:
             print "FAIL"
+            sys.exit(-1)
 
