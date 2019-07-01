@@ -3,4 +3,4 @@ compiler: gcc
 jobs:
         include:
                 - stage: test
-                  script: make test
+                  script: sh run_tests.sh 

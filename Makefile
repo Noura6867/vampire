@@ -705,12 +705,12 @@ doc:
 	rm -fr doc/html
 	doxygen config.doc
 
-test:
-test: $(VAMPIRE_OBJ) $(EXEC_DEF_PREREQ) 
-	@echo "Compiling vampire"
-	$(COMPILE_CMD)
+test_dbg: 
 	@echo "Running some tests"
-	python testing/run_tests.py  $@_$(BRANCH)_$(COM_CNT) 
+	python testing/run_tests.py  vampire_dbg_$(BRANCH)_$(COM_CNT) 
+test_rel: 
+	@echo "Running some tests"
+	python testing/run_tests.py  vampire_rel_$(BRANCH)_$(COM_CNT) 
 
 .PHONY: doc clean clausify_src api_src test
 
