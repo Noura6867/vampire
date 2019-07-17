@@ -2,3 +2,4 @@ Test Name,Problem Path,Option String,Expected Return Code,Expected Status
 test1,testing/simple/test_add1.p,,0,Theorem
 test2,testing/simple/test_add2.p,,0,Unsatisfiable
 test3,testing/simple/test_add2.p,-av off,0,Unsatisfiable
+test_SHOULD_FAIL,testing/simple/test_add2.p,-av off,0,Satisfiable
