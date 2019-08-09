@@ -29,3 +29,6 @@ fi
 # Dynamic tests
 make test_dbg
 make test_rel
+
+# Random tests
+python testing/run_random.py

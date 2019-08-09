@@ -46,7 +46,7 @@ with open(config,"r") as file:
             output = p.stdout.read()
             expected=data['Expected Status'] 
             for line in output.splitlines():
-                if 'SZS' in line and expected in line:
+                if 'SZS status' in line and expected in line:
                     passing=True
 
         if passing:
