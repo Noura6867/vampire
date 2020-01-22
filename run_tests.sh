@@ -31,4 +31,4 @@ make test_dbg
 make test_rel
 
 # Random tests
-# python testing/run_random.py
+#python testing/run_random.py

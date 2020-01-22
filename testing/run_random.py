@@ -15,12 +15,12 @@ print("Raondomly testing "+vampire_executable+"...")
 
 # Load problems
 problems = list()
-for root, dirnames, filenames in os.walk('../TPTP/Problems'):
+for root, dirnames, filenames in os.walk('./TPTP/Problems'):
     for filename in fnmatch.filter(filenames,'*.p'):
         name = os.path.join(root,filename)
         problems.append(name)
 
-print(problems)
+#print(problems)
 
 # Run for a minute
 time_left = 60
