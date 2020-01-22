@@ -709,12 +709,12 @@ test_dbg:
 	@echo "Running some tests"
 	#python testing/run_random.py vampire_dbg_$(BRANCH)_$(COM_CNT)
 	python testing/run_tests.py  vampire_dbg_$(BRANCH)_$(COM_CNT) 
-	python testing/run_tests_valgrind.py  vampire_dbg_$(BRANCH)_$(COM_CNT) 
+	#python testing/run_tests_valgrind.py  vampire_dbg_$(BRANCH)_$(COM_CNT) 
 test_rel: 
 	@echo "Running some tests"
 	#python testing/run_random.py vampire_rel_$(BRANCH)_$(COM_CNT)
 	python testing/run_tests.py  vampire_rel_$(BRANCH)_$(COM_CNT) 
-	python testing/run_tests_valgrind.py  vampire_rel_$(BRANCH)_$(COM_CNT) 
+	#python testing/run_tests_valgrind.py  vampire_rel_$(BRANCH)_$(COM_CNT) 
 
 .PHONY: doc clean clausify_src api_src test
 
