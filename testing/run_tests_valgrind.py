@@ -36,15 +36,18 @@ with open(config,"r") as file:
             options_args = []
         args = ['valgrind',vampire_executable,path,'--output_mode','szs','-p','off']+options_args
         print('args are '+str(args))
-        p = subprocess.Popen(args,stdout = subprocess.PIPE)
-
+        p = subprocess.Popen(args, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+        
+        std_out, std_err = p.communicate()
+        
         p.wait()
         print(p.returncode)
 
+        output = std_out + std_err
+
         passing=False
         valgrind_okay=False
-        if p.returncode ==0:
-            output = p.stdout.read()
+        if p.returncode == 0:
             expected=data['Expected Status'] 
             for line in output.splitlines():
                 if 'SZS status' in line and expected in line:
@@ -54,7 +57,7 @@ with open(config,"r") as file:
         else:
             print "FAIL (return code)"
             sys.exit(-1)
-
+        
         if passing: 
             if valgrind_okay:
                 print "PASS"
