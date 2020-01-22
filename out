@@ -1,0 +1,85 @@
+lrs+10_1_encode=on_600% SZS status CounterSatisfiable for SYN348+1
+% # SZS output start Saturation.
+tff(u142,negated_conjecture,
+    (![X0, X2] : ((~big_f(sK1(X0),sK2(X0,X2)) | big_f(sK2(X0,X2),X2) | big_f(sK2(X0,X2),sK1(X0)) | ~big_f(X2,sK2(X0,X2)) | sP0(X0,sK2(X0,X2),X2))))).
+
+tff(u141,negated_conjecture,
+    (![X0, X2] : ((~big_f(sK1(X0),sK2(X0,X2)) | big_f(X2,sK2(X0,X2)) | ~big_f(sK2(X0,X2),X2) | big_f(sK2(X0,X2),sK1(X0)) | sP0(X0,sK2(X0,X2),X2))))).
+
+tff(u140,negated_conjecture,
+    (![X0, X2] : ((~big_f(sK2(X0,X2),sK1(X0)) | ~big_f(X2,sK2(X0,X2)) | ~big_f(sK2(X0,X2),X2) | ~big_f(sK1(X0),sK2(X0,X2)) | sP0(X0,sK2(X0,X2),X2))))).
+
+tff(u139,negated_conjecture,
+    (![X0, X2] : ((~big_f(sK2(X0,X2),sK1(X0)) | ~big_f(X2,sK2(X0,X2)) | big_f(sK2(X0,X2),X2) | big_f(sK1(X0),sK2(X0,X2)) | sP0(X0,sK2(X0,X2),X2))))).
+
+tff(u138,negated_conjecture,
+    (![X0, X2] : ((~big_f(sK2(X0,X2),sK1(X0)) | big_f(X2,sK2(X0,X2)) | big_f(sK1(X0),sK2(X0,X2)) | ~big_f(sK2(X0,X2),X2) | sP0(X0,sK2(X0,X2),X2))))).
+
+tff(u137,negated_conjecture,
+    (![X0, X2] : ((~big_f(sK2(X0,X2),sK1(X0)) | big_f(X2,sK2(X0,X2)) | big_f(sK2(X0,X2),X2) | ~big_f(sK1(X0),sK2(X0,X2)) | sP0(X0,sK2(X0,X2),X2))))).
+
+tff(u136,negated_conjecture,
+    (![X9, X8] : ((~big_f(sK2(X9,X8),X9) | big_f(sK2(X9,X8),X8) | big_f(sK1(X9),sK2(X9,X8)) | big_f(sK2(X9,X8),sK1(X9)) | ~big_f(X9,sK2(X9,X8)) | big_f(X8,sK2(X9,X8)))))).
+
+tff(u135,negated_conjecture,
+    (![X7, X6] : ((~big_f(sK2(X6,X7),X7) | big_f(sK1(X6),sK2(X6,X7)) | ~big_f(X7,sK2(X6,X7)) | big_f(sK2(X6,X7),sK1(X6)) | big_f(X6,sK2(X6,X7)) | big_f(sK2(X6,X7),X6))))).
+
+tff(u134,negated_conjecture,
+    (![X15, X14] : ((~big_f(sK2(X14,X15),X15) | big_f(sK1(X14),sK2(X14,X15)) | ~big_f(X15,sK2(X14,X15)) | big_f(sK2(X14,X15),sK1(X14)) | ~big_f(X14,sK2(X14,X15)) | ~big_f(sK2(X14,X15),X14))))).
+
+tff(u133,negated_conjecture,
+    (![X1, X0] : ((big_f(sK2(X1,X0),sK1(X1)) | big_f(sK2(X1,X0),X0) | big_f(sK1(X1),sK2(X1,X0)) | big_f(X0,sK2(X1,X0)) | big_f(X1,sK2(X1,X0)) | big_f(sK2(X1,X0),X1))))).
+
+tff(u132,negated_conjecture,
+    (![X1] : ((big_f(sK2(X1,X1),sK1(X1)) | big_f(sK2(X1,X1),X1) | big_f(sK1(X1),sK2(X1,X1)) | big_f(X1,sK2(X1,X1)))))).
+
+tff(u131,negated_conjecture,
+    (![X0] : ((big_f(sK2(X0,sK1(X0)),sK1(X0)) | big_f(sK1(X0),sK2(X0,sK1(X0))) | big_f(X0,sK2(X0,sK1(X0))) | big_f(sK2(X0,sK1(X0)),X0))))).
+
+tff(u130,axiom,
+    (![X1, X0, X2] : ((~sP0(X0,X1,X2) | big_f(X2,X1) | big_f(X1,X2) | big_f(X0,X1) | big_f(X1,X0))))).
+
+tff(u129,axiom,
+    (![X1, X0, X2] : ((~sP0(X0,X1,X2) | big_f(X2,X1) | ~big_f(X1,X2) | ~big_f(X0,X1) | big_f(X1,X0))))).
+
+tff(u128,axiom,
+    (![X1, X0, X2] : ((~sP0(X0,X1,X2) | big_f(X1,X2) | ~big_f(X0,X1) | ~big_f(X2,X1) | big_f(X1,X0))))).
+
+tff(u127,axiom,
+    (![X1, X0, X2] : ((~sP0(X0,X1,X2) | big_f(X0,X1) | ~big_f(X1,X2) | ~big_f(X2,X1) | big_f(X1,X0))))).
+
+tff(u126,axiom,
+    (![X1, X0, X2] : ((~sP0(X0,X1,X2) | big_f(X2,X1) | big_f(X1,X2) | ~big_f(X0,X1) | ~big_f(X1,X0))))).
+
+tff(u125,axiom,
+    (![X1, X0, X2] : ((~sP0(X0,X1,X2) | big_f(X2,X1) | big_f(X0,X1) | ~big_f(X1,X2) | ~big_f(X1,X0))))).
+
+tff(u124,axiom,
+    (![X1, X0, X2] : ((~sP0(X0,X1,X2) | ~big_f(X2,X1) | big_f(X1,X2) | big_f(X0,X1) | ~big_f(X1,X0))))).
+
+tff(u123,axiom,
+    (![X1, X0, X2] : ((~sP0(X0,X1,X2) | ~big_f(X2,X1) | ~big_f(X1,X2) | ~big_f(X0,X1) | ~big_f(X1,X0))))).
+
+tff(u122,negated_conjecture,
+    (![X0, X2] : ((sP0(X0,sK2(X0,X2),X2) | big_f(sK1(X0),sK2(X0,X2)) | ~big_f(sK2(X0,X2),X2) | ~big_f(X2,sK2(X0,X2)) | big_f(sK2(X0,X2),sK1(X0)))))).
+
+tff(u121,negated_conjecture,
+    (![X0, X2] : ((sP0(X0,sK2(X0,X2),X2) | big_f(X2,sK2(X0,X2)) | big_f(sK2(X0,X2),X2) | big_f(sK1(X0),sK2(X0,X2)) | big_f(sK2(X0,X2),sK1(X0)))))).
+
+tff(u120,negated_conjecture,
+    (![X2] : ((sP0(X2,sK2(X2,sK1(X2)),sK1(X2)) | big_f(X2,sK2(X2,sK1(X2))) | big_f(sK2(X2,sK1(X2)),X2) | big_f(sK1(X2),sK2(X2,sK1(X2))))))).
+
+% # SZS output end Saturation.
+% ------------------------------
+% Version: Vampire 4.3.0 (commit 7e3004ef on 2019-07-01 15:22:40 +0100)
+% Termination reason: Satisfiable
+
+% Memory used [KB]: 4989
+% Time elapsed: 0.018 s
+% ------------------------------
+----  Runtime statistics ----
+clauses created: 108
+clauses deleted: 77
+naming_introduced_defs: 1
+-----------------------------
+% ------------------------------

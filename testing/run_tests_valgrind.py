@@ -11,7 +11,7 @@ vampire_executable = "./"+sys.argv[1].strip()
 
 print("Testing "+vampire_executable+"...")
 
-config="testing/test_config.csv"
+config="test_config.csv"
 
 # Open config in read mode
 # Iterate over lines in file (for loop)
