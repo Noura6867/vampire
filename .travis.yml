@@ -1,6 +1,14 @@
 language: cpp
 compiler: gcc
+addons:
+        apt:
+                packages:
+                        - valgrind
+                        - cppcheck
 jobs:
         include:
                 - stage: test
-                  script: sh run_tests.sh 
+                  script: 
+                        - sh run_tests.sh 
+                        - valgrind --error-exitcode=1 --leak-check=full --show-leak-kinds=all .
+                        - cppcheck --error-exitcode=1 --enable=warning,performance,information,style *.cpp *.hpp *.h
