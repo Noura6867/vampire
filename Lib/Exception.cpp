@@ -68,7 +68,7 @@ SystemFailException::SystemFailException(const vstring msg, int err)
 : Exception(msg+" error "+Int::toString(err)+": "+strerror(err)), err(err)
 {
 //#if VDEBUG
-//  LOGS("system fail exception thrown");
+//  LOGS("system fail exception thrown due to some error");
 //#endif
 }
 /**
