@@ -4,9 +4,10 @@ os:
         - linux
 before_install:
         - sudo apt-get update
-        - sudo apt-get install valgrind
+        - sudo apt-get install cppcheck
 jobs:
         include:
                 - stage: test
                   script:  
-                        - valgrind  --leak-check=full --show-leak-kinds=all ./vampire
+                        - cppcheck --enable=all --inconclusive -v .
+  
