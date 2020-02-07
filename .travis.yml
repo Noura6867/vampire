@@ -8,6 +8,5 @@ before_install:
 jobs:
         include:
                 - stage: test
-                  script: 
-                        - sh run_tests.sh 
-                        - valgrind --error-exitcode=1 --leak-check=full --show-leak-kinds=all .
+                  script:  
+                        - valgrind --error-exitcode=1 --leak-check=full --show-leak-kinds=all ./vampire
