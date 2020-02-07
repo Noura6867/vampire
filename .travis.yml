@@ -9,5 +9,5 @@ jobs:
         include:
                 - stage: test
                   script:  
-                        - cppcheck --enable=all --inconclusive --xml-version=2 -v .
+                        - cppcheck --enable=all --inconclusive --xml-version=2 -v vampire.cpp
   
