@@ -4,13 +4,11 @@ import sys
 import csv
 import subprocess
 
-# TODO: find a csv parsing library and import it
+# TODO: find a csv parsing library and import
 
 #get this from command-line argument
 vampire_executable = "./"+sys.argv[1].strip()
-
 print("Testing "+vampire_executable+"...")
-
 config="testing/test_config.csv"
 
 # Open config in read mode
