@@ -1,6 +1,4 @@
 language: python
-before_install:
-        -python --version
 os:
         - linux
 jobs:          
