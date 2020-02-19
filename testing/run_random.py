@@ -76,15 +76,15 @@ while time_left > 0:
                     incomplete=True
 
         if passing:
-            print "PASS"
+            print("PASS")
         elif timed_out:
-            print "TIMED OUT"
+            print("TIMED OUT")
         elif incomplete:
-            print "INCOMPLETE STRATEGY"
+            print("INCOMPLETE STRATEGY")
         elif user_error:
-            print "STRATEGY INVALID"
+            print("STRATEGY INVALID")
         else:
-            print "FAIL"
+            print("FAIL")
             for line in output_lines:
                 print(line)
             sys.exit(-1)
